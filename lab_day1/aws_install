@@ -1,0 +1,13 @@
+#####View version 
+#aws --version
+####Connect to aws console  management
+1. Get Key in Credential Security on AWS
+2. running command #aws configure
+3. Fill the Key and Secret
+####check the profile 
+#aws sts get-caller-identity
+if the out put not show the information successful need to change the configure in #vim ~/.aws/credentials
+Change the profile default to user needed. 
+
+
+

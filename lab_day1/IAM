@@ -1,0 +1,14 @@
+#######IAM
+Quản Lý xác thực danh tính và Truy Cập Người Dùng
+=> Phân quyền tài khoản theo người dùng ứng với mỗi vai trò và trách nhiệm của họ dựa trên công việc thực thi
+
+Gồm có  4 điều kiện chính
+
+IAM Resources - bao gồm user, group, role, policy
+
+IAM Identities
+
+IAM Entities
+
+
+Principals

@@ -1,6 +1,14 @@
 # day 2
 
-![alt](https://github.com/hoanghaithtb/AWS/blob/master/lab_day1/(1)-config%20connect%20aws%20by%20key.jpg)
-![alt](https://github.com/hoanghaithtb/AWS/blob/master/lab_day1/(2)-user%20root.png)
-![alt](https://github.com/hoanghaithtb/AWS/blob/master/lab_day1/(3)-user%20hai.hoang%20test.png)
-![alt](https://github.com/hoanghaithtb/AWS/blob/master/lab_day1/(4)-user%20indentity%20-%20hai.hoang.png)
+![1- Create 2 User](https://user-images.githubusercontent.com/85090024/155853424-591b468c-01a8-43ed-b148-1d4a67c6d368.png)
+![2 1 - Create Policy Full Access EC2](https://user-images.githubusercontent.com/85090024/155853452-42582b8c-5680-44c4-a048-700122cbecfb.png)
+![2 2 Create Policy Full Access S3](https://user-images.githubusercontent.com/85090024/155853454-9d1fe77b-73f3-4969-a440-227b6f049c19.png)
+![3 1 - Create Role by AWS Service](https://user-images.githubusercontent.com/85090024/155853433-41ef8c25-fc0d-434f-b140-a4dd766039c4.png)
+![3 2 - Create Role by EC2 Service](https://user-images.githubusercontent.com/85090024/155853435-54b458e6-2c48-459c-94a7-e676847fc87b.png)
+![4 1 add Permision hai hoang](https://user-images.githubusercontent.com/85090024/155853438-66549817-3f57-4d7b-9ccc-dedcbafcb4ea.png)
+![4 2 add Permission hai hoang02](https://user-images.githubusercontent.com/85090024/155853440-4ee79910-aa05-4639-a58c-528ab0006e4b.png)
+![hai hoang can not access s3](https://user-images.githubusercontent.com/85090024/155853442-9b491202-2eca-49fa-b7eb-0176a170870d.png)
+![hai hoang have permission access EC2](https://user-images.githubusercontent.com/85090024/155853443-4a3c7a1c-3e8c-4056-9565-bb8a92162d4e.png)
+![hai hoang02 can not access EC2](https://user-images.githubusercontent.com/85090024/155853449-011c1852-5193-45b2-906d-84f12228a11b.png)
+![hai hoang02 have permision to access S3](https://user-images.githubusercontent.com/85090024/155853451-7e16b895-fa63-43fd-9baa-574c5d335bd7.png)
+

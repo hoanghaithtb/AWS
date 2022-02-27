@@ -11,4 +11,6 @@
 ![hai hoang have permission access EC2](https://user-images.githubusercontent.com/85090024/155853443-4a3c7a1c-3e8c-4056-9565-bb8a92162d4e.png)
 ![hai hoang02 can not access EC2](https://user-images.githubusercontent.com/85090024/155853449-011c1852-5193-45b2-906d-84f12228a11b.png)
 ![hai hoang02 have permision to access S3](https://user-images.githubusercontent.com/85090024/155853451-7e16b895-fa63-43fd-9baa-574c5d335bd7.png)
-
+![Create Assume Role Policy for EC2](https://user-images.githubusercontent.com/85090024/155872627-8bcdba53-684c-46c0-aa33-ff9970307020.png)
+![Create Assume Role for Account Aws](https://user-images.githubusercontent.com/85090024/155872633-c2b7c0d0-1b91-4b98-a9b5-6ffeed843d76.png)
+![add Permission Policy Assume for account](https://user-images.githubusercontent.com/85090024/155872639-54023407-9b37-4525-8371-d8d075c9b123.png)

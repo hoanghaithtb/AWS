@@ -14,3 +14,6 @@
 ![Create Assume Role Policy for EC2](https://user-images.githubusercontent.com/85090024/155872627-8bcdba53-684c-46c0-aa33-ff9970307020.png)
 ![Create Assume Role for Account Aws](https://user-images.githubusercontent.com/85090024/155872633-c2b7c0d0-1b91-4b98-a9b5-6ffeed843d76.png)
 ![add Permission Policy Assume for account](https://user-images.githubusercontent.com/85090024/155872639-54023407-9b37-4525-8371-d8d075c9b123.png)
+![Instances EC2](https://user-images.githubusercontent.com/85090024/155874261-74c01374-ec0c-4cb5-ac45-1ec223b1bbc8.png)
+![authen with ssh keygen](https://user-images.githubusercontent.com/85090024/155874264-de16d58a-4a8c-4cb7-a6ec-9b3ad701b6e8.png)
+

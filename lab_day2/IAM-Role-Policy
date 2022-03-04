@@ -16,3 +16,9 @@ ___________________
 3- Add Permission cho Account cần Switch Role. 
 
 	
+___________________
+
+##### Intance EC2
+
+- Chuyển region 
+- User ssh ec2-user

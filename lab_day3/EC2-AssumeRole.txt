@@ -1,0 +1,13 @@
+1- Create account name1, name2
+2- Create file Json name1-policy.json  Allow Full EC2, 
+   Create file Json name2-policy.json  Allow Full S3
+3- Attach Policy to user name1, name2 ( add Permision Policy), get key accsess name1
+4- Create AssumeRole.Json has principa root: Allow all user can assumerole
+5- Attach Policy Allow Full S3 Assume Role
+6- AssumeRole and get key
+7- aws configure with session Key 
+
+
+
+
+

@@ -1,0 +1,85 @@
+key-0f599f6d2303bebc7  Test_EC2_Instan
+sg-02083a3560b96169e
+ami-0c293f3f676ec4f90
+restoressh
+--associate-public-ip-address
+sg-0f6eb72da252029de
+ami-04505e74c0741db8d 
+https://www.nginx.com/blog/setting-up-nginx/
+https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/QuickStartEC2Instance.html
+aws ec2 run-instances --image-id ami-0c293f3f676ec4f90 --count 1 --instance-type t2.micro --key-name Test_EC2_Instan --security-group-ids sg-0f6eb72da252029de --associate-public-ip-address
+aws ec2 run-instances --image-id ami-0c293f3f676ec4f90 --count 1 --instance-type t2.micro --key-name Test_EC2_Instan --security-group-ids sg-02083a3560b96169e --associate-public-ip-address
+aws ec2 run-instances --image-id ami-0c293f3f676ec4f90 --count 1 --instance-type t2.micro --key-name restoressh --security-group-ids sg-02083a3560b96169e --associate-public-ip-address
+
+
+2- Pending for request Extend vCPU
+
+3- Sesssion manager
+- Create Role has permission AmazonSSMManagedInstanceCore
+- Add IAM role to Instance
+- Start Session in System Manager
+
+4- Install NGINX and send log to CloudWatch
+######### aws cli
+ wget http://nginx.org/keys/nginx_signing.key
+ wget http://nginx.org/keys/nginx_signing.key
+ echo /etc/apt/source.list
+	deb http://nginx.org/packages/ubuntu focal nginx
+	deb-src http://nginx.org/packages/ubuntu focal nginx
+ apt-get update
+ apt-get install nginx
+ systemctl start nginx.service
+ systemctl start nginx.service
+ 
+
+iamRole-logs.json
+{
+    "Version": "2012-10-17",
+    "Statement": [{
+        "Effect": "Allow",
+        "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:PutLogEvents",
+            "logs:DescribeLogStreams"
+        ],
+        "Resource": [
+            "arn:aws:logs:*:*:*"
+        ]
+    }]
+}
+
+ aws iam create-policy --policy-name aws-log-policy --policy-document file://iamRole-Log.json
+ aws iam attach-user-policy --user-name name1 --policy-arn "arn:aws:iam::850544150388:policy/aws-log-policy"
+ 
+ ##Create Instance ubuntu
+ aws ec2 run-instances --image-id ami-04505e74c0741db8d --count 1 --instance-type t2.micro --key-name Test_EC2_Instan --security-group-ids sg-0f6eb72da252029de --associate-public-ip-address
+#### On the Instance
+	curl https://s3.amazonaws.com/aws-cloudwatch/downloads/latest/awslogs-agent-setup.py -O
+	apt-get upgrade python -y
+	python ./awslogs-agent-setup.py --region us-east-1
+	vi /var/awslogs/etc/awslogs.conf
+				echo 
+					[/var/log/syslog]
+					datetime_format = %b %d %H:%M:%S
+					file = /var/log/syslog
+					buffer_duration = 5000
+					log_stream_name = {instance_id}
+					initial_position = start_of_file
+					log_group_name = /var/log/syslog
+					[/var/log/nginx/access.log]
+					datetime_format = %d/%b/%Y:%H:%M:%S %z
+					file = /var/log/nginx/access.log
+					buffer_duration = 5000
+					log_stream_name = access.log
+					initial_position = end_of_file
+					log_group_name = /ec2/nginx/logs
+					[/var/log/nginx/error.log]
+					datetime_format = %Y/%m/%d %H:%M:%S
+					file = /var/log/nginx/error.log
+					buffer_duration = 5000
+					log_stream_name = error.log
+					initial_position = end_of_file
+					log_group_name = /ec2/nginx/logs
+	service awslogs restart
+	service awslogs status

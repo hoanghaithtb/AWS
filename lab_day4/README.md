@@ -10,16 +10,17 @@ Add IAM role to Instance
 Start Session in System Manager
 ![Screenshot_17](https://user-images.githubusercontent.com/85090024/156912567-5de4445b-bbcb-4c65-b7e2-907c2c41c2dc.png)
 ###########Install NGINX and send log to CloudWatch
+Create IAM role log for user name1 
+![Screenshot_10](https://user-images.githubusercontent.com/85090024/156912694-b6350c61-0371-4df8-b1d5-6e1dc5794594.png)
+Create new rule for HTTP
+![Screenshot_22](https://user-images.githubusercontent.com/85090024/156913168-b35e3c72-8d0a-4dfd-9130-fe67851f95bb.png)
 Create Ubuntu Instance
 ![Screenshot_1](https://user-images.githubusercontent.com/85090024/156912633-989ea222-8d8d-4d58-9d61-7178e2c0d22d.png)
 Show instance description
 ![Screenshot_2](https://user-images.githubusercontent.com/85090024/156912641-6eac98a2-e5a2-4bea-833a-cca36ba17aed.png)
-Create IAM role log for user name1 
-![Screenshot_10](https://user-images.githubusercontent.com/85090024/156912694-b6350c61-0371-4df8-b1d5-6e1dc5794594.png)
 Install NGINX
 ![Screenshot_4](https://user-images.githubusercontent.com/85090024/156912725-9fe61fad-33c8-4b30-b951-fcb35c61b26e.png)
 ![Screenshot_12](https://user-images.githubusercontent.com/85090024/156913021-48bee997-22fb-4a4d-9b08-71e1d822411c.png)
-
 Install aws-logs
 ![Screenshot_5](https://user-images.githubusercontent.com/85090024/156912726-6362844c-c8f6-4d72-a8b4-4c8832c7d793.png)
 ![Screenshot_6](https://user-images.githubusercontent.com/85090024/156912727-c80e5628-a826-416a-88a0-517ee551cfc5.png)

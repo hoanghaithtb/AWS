@@ -11,4 +11,5 @@ Creat Internet-Gateway
 Add Route
 ![Screenshot_2](https://user-images.githubusercontent.com/85090024/160123902-18eff7b9-6302-416c-b2fc-d27d996cea6a.png)
 Run EC2 with Public Subnet
-![Screenshot_1](https://user-images.githubusercontent.com/85090024/160123659-7349d4da-26e5-4d52-bfc8-7365c0dbcf0f.png)
+![Screenshot_12](https://user-images.githubusercontent.com/85090024/160126344-e54fc6cf-7820-4bf0-bb32-cc69db3b5744.png)
+Connect SSH

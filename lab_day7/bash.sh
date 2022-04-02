@@ -46,7 +46,7 @@ SecId=$(echo $secgid| cut -c4-23)
 ##Delete Default IsEgress Rule
 SecRule=$(aws ec2 describe-security-group-rules --filters "Name=group-id,Values=$SecId" --query 'SecurityGroupRules[0].SecurityGroupRuleId')
 SecruleId=$(echo $SecRule| cut -c2-22)
-aws ec2 revoke-security-group-ingress --security-group-rule-ids $SecruleId
+aws ec2 revoke-security-group-ingress --group-id $SecId --security-group-rule-ids $SecruleId
 ##Add SSH Rule
 aws ec2 authorize-security-group-ingress --group-id $SecId --protocol tcp --port 22 --cidr 0.0.0.0/0
 #Lauch_Instance

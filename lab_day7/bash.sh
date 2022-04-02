@@ -44,7 +44,7 @@ aws ec2 associate-route-table --subnet-id $sub4id --route-table-id $routeid
 secgid=$(aws ec2 describe-security-groups --filters "Name=vpc-id,Values=$Pubs" --query 'SecurityGroups[*].GroupId')
 SecId=$(echo $secgid| cut -c4-23)
 ##Delete Default IsEgress Rule
-SecRule=$(aws ec2 describe-security-group-rules --filters "Name=group-id,Values=$SecId" --query 'SecurityGroupRules[1].SecurityGroupRuleId')
+SecRule=$(aws ec2 describe-security-group-rules --filters "Name=group-id,Values=$SecId" --query 'SecurityGroupRules[0].SecurityGroupRuleId')
 SecruleId=$(echo $SecRule| cut -c2-22)
 aws ec2 revoke-security-group-ingress --security-group-rule-ids $SecruleId
 ##Add SSH Rule

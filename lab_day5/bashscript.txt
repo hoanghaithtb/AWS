@@ -1,0 +1,23 @@
+#!/bin/bash
+sudo -i
+update -y
+amazon-linux-extras install -y nginx1
+service nginx start
+yum install -y awslogs
+echo "log_group_name = /var/log/syslog" >> /etc/awslogs/awslogs.conf 
+echo "[/var/log/nginx/access.log]" >> /etc/awslogs/awslogs.conf 
+echo "datetime_format = %d/%b/%Y:%H:%M:%S %z" >> /etc/awslogs/awslogs.conf 
+echo "file = /var/log/nginx/access.log" >> /etc/awslogs/awslogs.conf 
+echo "buffer_duration = 5000" >> /etc/awslogs/awslogs.conf 
+echo "log_stream_name = access.log" >> /etc/awslogs/awslogs.conf 
+echo "initial_position = end_of_file" >> /etc/awslogs/awslogs.conf 
+echo "log_group_name = /ec2/nginx/logs" >> /etc/awslogs/awslogs.conf 
+echo "[/var/log/nginx/error.log]" >> /etc/awslogs/awslogs.conf
+echo "datetime_format = %Y/%m/%d %H:%M:%S" >> /etc/awslogs/awslogs.conf 
+echo "file = /var/log/nginx/error.log" >> /etc/awslogs/awslogs.conf 
+echo "buffer_duration = 5000" >> /etc/awslogs/awslogs.conf 
+echo "log_stream_name = error.log" >> /etc/awslogs/awslogs.conf 
+echo "initial_position = end_of_file" >> /etc/awslogs/awslogs.conf 
+echo "log_group_name = /ec2/nginx/logs" >> /etc/awslogs/awslogs.conf 
+systemctl start awslogsd
+systemctl enable awslogsd.service
